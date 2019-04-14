@@ -1,5 +1,6 @@
 import time
 import warnings
+import rospy
 
 
 def _clamp(value, limits):
@@ -12,15 +13,7 @@ def _clamp(value, limits):
         return lower
     return value
 
-
-try:
-    # get monotonic time to ensure that time deltas are always positive
-    _current_time = time.monotonic
-except AttributeError:
-    # time.monotonic() not available (using python < 3.3), fallback to time.time()
-    _current_time = time.time
-    warnings.warn('time.monotonic() not available in python < 3.3, using time.time() as fallback')
-
+_current_time = rospy.get_time
 
 class PID(object):
     """
