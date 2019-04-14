@@ -1,4 +1,4 @@
-# simple-pid
+# simple-ros-pid
 
 [![Travis](https://travis-ci.com/m-lundberg/simple-pid.svg?branch=master)](https://travis-ci.com/m-lundberg/simple-pid)
 [![PyPI](https://img.shields.io/pypi/v/simple-pid.svg)](https://pypi.org/project/simple-pid/)
@@ -6,6 +6,9 @@
 [![License](https://img.shields.io/github/license/m-lundberg/simple-pid.svg)](https://github.com/m-lundberg/simple-pid/blob/master/LICENSE.md)
 
 A simple and easy to use PID controller in Python. If you want a PID controller without external dependencies that just works, this is for you! The PID was designed to be robust with help from [Brett Beauregards guide](http://brettbeauregard.com/blog/2011/04/improving-the-beginners-pid-introduction/).
+
+**This simple-pid controller has been modified to use rospy time instead of python's built-in time.**
+This allows the controller to function with simulated time as well.
 
 Usage is very simple:
 
